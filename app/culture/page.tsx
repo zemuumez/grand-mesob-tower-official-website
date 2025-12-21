@@ -7,6 +7,7 @@ import {
 } from "../components/EthiopianPatterns";
 import ParallaxSection from "../components/ParallaxSection";
 import Link from "next/link";
+import PatternDivider from "../components/pattern_devider";
 
 export default function CulturePage() {
   return (
@@ -100,12 +101,14 @@ export default function CulturePage() {
       </section>
 
       {/* Heritage Museum Section */}
-      <section className="relative py-32 px-6 bg-[#0a0a0a] text-white">
+      <section className="relative  bg-[#0a0a0a] text-white">
+        <PatternDivider variant="tibeb" />
+
         <div className="absolute inset-0 text-white opacity-5">
           <TrianglePattern />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-6xl py-32 px-6 mx-auto relative z-10">
           <div className="text-center mb-20">
             <p className="text-[#c8a882] text-sm uppercase tracking-[0.3em] mb-4">
               Museum Floors
@@ -182,6 +185,7 @@ export default function CulturePage() {
             </div>
           </div>
         </div>
+        <PatternDivider variant="tibeb" />
       </section>
 
       {/* Regional Galleries Section */}

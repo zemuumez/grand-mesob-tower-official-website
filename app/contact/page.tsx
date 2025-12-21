@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { MesobPattern } from "../components/EthiopianPatterns";
 import ParallaxSection from "../components/ParallaxSection";
+import PatternDivider from "../components/pattern_devider";
 
 export default function ContactPage() {
   const [formType, setFormType] = useState<"general" | "business">("general");
@@ -124,8 +125,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="relative py-20 px-6 bg-[#0a0a0a] text-white">
-        <div className="max-w-4xl mx-auto">
+      <section className="relative  bg-[#0a0a0a] text-white">
+        <PatternDivider variant="tibeb" />
+        <div className="max-w-4xl mx-auto py-20 px-6">
           {/* Form Type Selector */}
           <div className="flex justify-center mb-12">
             <div className="inline-flex border border-white/20 rounded-sm overflow-hidden">
@@ -333,6 +335,7 @@ export default function ContactPage() {
             </p>
           </form>
         </div>
+        <PatternDivider variant="tibeb" />
       </section>
 
       {/* Additional Information Section */}
@@ -394,11 +397,19 @@ export default function ContactPage() {
 
       {/* Map Section (Placeholder) */}
       <section className="relative h-96 bg-[#1a1a1a]">
+        {/* <PatternDivider variant="tibeb" /> */}
+
         <div className="absolute inset-0 flex items-center justify-center text-white/40">
-          <div className="text-center">
-            <p className="text-sm uppercase tracking-wider">Location Map</p>
-            <p className="text-xs mt-2">(Interactive Map Placeholder)</p>
-          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247632.3084258712!2d38.61333159337322!3d8.96314036942435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e1!3m2!1sen!2sus!4v1766282064625!5m2!1sen!2sus"
+            // width="600"
+            // height="450"
+            className="h-96 w-full"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </section>
     </div>

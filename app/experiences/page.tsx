@@ -4,6 +4,7 @@ import { TrianglePattern, MesobPattern } from "../components/EthiopianPatterns";
 import ParallaxSection from "../components/ParallaxSection";
 import Link from "next/link";
 import Image from "next/image";
+import PatternDivider from "../components/pattern_devider";
 
 export default function ExperiencesPage() {
   return (
@@ -105,12 +106,14 @@ export default function ExperiencesPage() {
       </section>
 
       {/* Dining Experiences Section */}
-      <section className="relative py-32 px-6 bg-[#0a0a0a] text-white">
+      <section className="relative  bg-[#0a0a0a] text-white">
+        <PatternDivider variant="tibeb" />
+
         <div className="absolute inset-0 text-white opacity-5">
           <MesobPattern />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-6xl py-32 px-6 mx-auto relative z-10">
           <div className="text-center mb-20">
             <p className="text-[#c8a882] text-sm uppercase tracking-[0.3em] mb-4">
               Culinary Excellence
@@ -176,6 +179,7 @@ export default function ExperiencesPage() {
             </div>
           </div>
         </div>
+        <PatternDivider variant="tibeb" />
       </section>
 
       {/* Hotel & Accommodations Section */}
