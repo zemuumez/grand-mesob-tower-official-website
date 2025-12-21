@@ -7,6 +7,7 @@ import {
 } from "../components/EthiopianPatterns";
 import ParallaxSection from "../components/ParallaxSection";
 import Link from "next/link";
+import Image from "next/image";
 import PatternDivider from "../components/pattern_devider";
 
 export default function CulturePage() {
@@ -57,11 +58,17 @@ export default function CulturePage() {
               <div className="absolute -top-10 -left-10 text-black/5 w-64 h-64">
                 <MesobPattern opacity={0.1} />
               </div>
-              <div className="relative bg-gradient-to-br from-[#2d5a3d]/20 to-[#c8a882]/20 h-[500px] flex items-center justify-center">
-                <div className="text-center text-black/40 text-sm uppercase tracking-wider">
-                  Traditional Mesob
-                  <br />
-                  <span className="text-xs">(Image Placeholder)</span>
+              <div className="frame-wood h-full">
+                <div className="frame-wood-inner bg-gradient-to-br from-[#c8a882]/20 to-[#2d5a3d]/10 h-[500px] flex items-center justify-center">
+                  <div className="text-center text-black/40 text-sm uppercase tracking-wider">
+                    <Image
+                      src="/assets/grandmesobtower.png"
+                      alt="Culture and Heritage"
+                      fill
+                      className="object-cover"
+                      priority={false}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,7 +81,7 @@ export default function CulturePage() {
                 The Story of the Mesob
               </h2>
               <p className="text-black/70 text-lg leading-relaxed mb-6">
-                The mesob is far more than a woven basket—it is a symbol of
+                The mesob is far more than a woven basket, it is a symbol of
                 Ethiopian hospitality, community, and the sacred act of sharing.
               </p>
               <p className="text-black/70 text-lg leading-relaxed mb-6">
