@@ -9,6 +9,80 @@ interface PatternProps {
   opacity?: number;
 }
 
+interface MesobSilhouetteProps extends PatternProps {
+  variant?: "outline" | "banded" | "striped";
+  strokeWidth?: number;
+  lineGap?: number;
+  idSuffix?: string;
+}
+
+/**
+ * Mesob-inspired silhouette with optional band or striped fill.
+ * Useful as a watermark or decorative motif.
+ */
+export function MesobSilhouettePattern({
+  className = "",
+  opacity = 0.15,
+  variant = "striped",
+  strokeWidth = 2,
+  lineGap = 8,
+  idSuffix = "default",
+}: MesobSilhouetteProps) {
+  const pathD =
+    "M160 12 L150 22 L150 48 Q150 60 130 78 Q94 106 54 130 Q46 134 46 144 Q46 154 50 162 Q54 170 88 178 L112 184 L100 204 Q72 252 38 324 H282 Q248 252 220 204 L208 184 L232 178 Q266 170 270 162 Q274 154 274 144 Q274 134 266 130 Q226 106 190 78 Q170 60 170 48 L170 22 Z";
+
+  const clipId = `mesob-clip-${idSuffix}`;
+
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 320 360"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ opacity }}
+      preserveAspectRatio="xMidYMid meet"
+      role="presentation"
+      aria-hidden="true"
+    >
+      <defs>
+        <clipPath id={clipId}>
+          <path d={pathD} />
+        </clipPath>
+      </defs>
+
+      {variant === "striped" && (
+        <g clipPath={`url(#${clipId})`} stroke="currentColor" strokeWidth={strokeWidth}>
+          {Array.from({ length: Math.ceil(360 / lineGap) }).map((_, i) => {
+            const y = i * lineGap + 12;
+            return <line key={y} x1={40} x2={280} y1={y} y2={y} />;
+          })}
+        </g>
+      )}
+
+      {variant === "banded" && (
+        <g clipPath={`url(#${clipId})`}>
+          <rect
+            x="48"
+            y="122"
+            width="224"
+            height="24"
+            fill="currentColor"
+            opacity={0.12}
+          />
+        </g>
+      )}
+
+      <path
+        d={pathD}
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
 // Mesob-inspired circular pattern (represents the woven basket)
 export function MesobPattern({ className = '', opacity = 0.1 }: PatternProps) {
   return (
@@ -168,4 +242,3 @@ export function StripePattern({ className = '', opacity = 0.05 }: PatternProps) 
     </svg>
   );
 }
-

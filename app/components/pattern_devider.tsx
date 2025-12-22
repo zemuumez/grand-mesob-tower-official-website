@@ -64,7 +64,7 @@ export default function PatternDivider({ variant }: PatternDividerProps) {
             y="10"
             width="10"
             height="10"
-            fill="#C8A882"
+            fill="#FFD700"
             transform="rotate(45 15 15)"
           />
           <rect
@@ -72,7 +72,7 @@ export default function PatternDivider({ variant }: PatternDividerProps) {
             y="20"
             width="10"
             height="10"
-            fill="#C8A882"
+            fill="#FFD700"
             transform="rotate(45 25 25)"
           />
           <rect
@@ -80,7 +80,7 @@ export default function PatternDivider({ variant }: PatternDividerProps) {
             y="10"
             width="10"
             height="10"
-            fill="#C8A882"
+            fill="#FFD700"
             transform="rotate(45 35 15)"
           />
         </pattern>

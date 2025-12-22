@@ -110,7 +110,7 @@ export default function Home() {
               <div className="frame-wood mb-6 overflow-hidden">
                 <div className="frame-wood-inner bg-gradient-to-br from-[#c8a882]/20 to-[#2d5a3d]/10 relative w-full h-80 group-hover:scale-105 transition-transform duration-700">
                   <Image
-                    src="/assets/cultural Heritage.png"
+                    src="/assets/pillars/cultural Heritage.png"
                     alt="Culture and Heritage"
                     fill
                     className="object-cover"
@@ -143,7 +143,7 @@ export default function Home() {
                 {/* <div className="w-full h-80 bg-gradient-to-br from-[#8b3a3a]/10 to-[#c8a882]/10 group-hover:scale-105 transition-transform duration-700"></div> */}
                 <div className="frame-wood-inner bg-gradient-to-br from-[#c8a882]/20 to-[#2d5a3d]/10 relative w-full h-80 group-hover:scale-105 transition-transform duration-700">
                   <Image
-                    src="/assets/hospitality and experiences.png"
+                    src="/assets/pillars/hospitality and experiences.png"
                     alt="Culture and Heritage"
                     fill
                     className="object-cover"
@@ -175,7 +175,7 @@ export default function Home() {
                 {/* <div className="w-full h-80 bg-gradient-to-br from-[#c8a882]/10 to-black/10 group-hover:scale-105 transition-transform duration-700"></div> */}
                 <div className="frame-wood-inner bg-gradient-to-br from-[#c8a882]/20 to-[#2d5a3d]/10 relative w-full h-80 group-hover:scale-105 transition-transform duration-700">
                   <Image
-                    src="/assets/business and innovations.png"
+                    src="/assets/pillars/business and innovations.png"
                     alt="Culture and Heritage"
                     fill
                     className="object-cover"

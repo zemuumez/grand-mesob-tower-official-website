@@ -1,10 +1,14 @@
 "use client";
 
-import { MesobPattern, DiamondPattern } from "../components/EthiopianPatterns";
+import {
+  MesobPattern,
+  DiamondPattern,
+  MesobSilhouettePattern,
+} from "../components/EthiopianPatterns";
+import Image from "next/image";
+import PictureWatermark from "../components/PictureWatermark";
 // import TowerBuildAnimation from "../components/TowerBuildAnimation";
 import Link from "next/link";
-import Image from "next/image";
-import PhotoFrame from "../components/PhotoFrame";
 
 export default function TowerPage() {
   return (
@@ -57,25 +61,20 @@ export default function TowerPage() {
           <MesobPattern />
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[320px,1fr] gap-12 items-center relative z-10">
-          <PhotoFrame className="justify-self-center md:justify-self-start shadow-2xl">
-            <Image
-              src="/assets/tsegaye.JPG"
-              alt="Tsegaye Teklu, Founder of Grand Mesob Tower"
-              width={900}
-              height={1200}
-              className="object-cover w-[320px] h-[480px]"
-              priority
-            />
-          </PhotoFrame>
-
-          <div>
-            <p className="text-[#c8a882] text-sm uppercase tracking-[0.3em] mb-4">
+        <div className="max-w-4xl mx-auto relative z-10">
+          {/* <PictureWatermark
+            opacity={0.22}
+            className="w-full  rounded-sm shadow-2xl border border-black/10 flex items-center justify-center"
+            sizes="(min-width: 1024px) 720px, 100vw"
+          > */}
+          <div className="bg-white/5 border border-[#c8a882]/25 backdrop-blur-sm p-10 md:p-12 shadow-2xl">
+            <p className="text-[#c8a882] text-sm uppercase tracking-[0.3em] mb-3">
               Founder
             </p>
-            <h2 className="font-playfair text-white text-3xl mb-6">
+            <h2 className="font-playfair text-white text-3xl mb-4">
               Tsegaye Teklu
             </h2>
+            <div className="w-16 h-px bg-[#c8a882]/60 mb-6" />
             <p className="text-white/75 text-lg leading-relaxed mb-4">
               Tsegaye Teklu is the visionary founder behind Grand Mesob Tower.
               His passion for honoring Ethiopia&apos;s heritage while shaping
@@ -88,6 +87,7 @@ export default function TowerPage() {
               community - an enduring symbol of Ethiopian excellence.
             </p>
           </div>
+          {/* </PictureWatermark> */}
         </div>
       </section>
 
@@ -126,14 +126,13 @@ export default function TowerPage() {
                 engineering and sustainable design principles.
               </p>
             </div>
-            <div className="frame-wood ">
-              <div className="frame-wood-inner h-80 bg-gradient-to-br from-[#8b3a3a]/10 to-[#c8a882]/20  flex items-center justify-center">
-                <div className="text-center text-black/40 text-sm uppercase tracking-wider">
+            <div className="frame-wood h-full">
+              <div className="frame-wood-inner bg-gradient-to-br from-[#c8a882]/20 to-[#2d5a3d]/10 flex items-center justify-center">
+                <div className="text-center h-screen text-black/40 text-sm uppercase tracking-wider">
                   <Image
-                    src="/assets/concept1.jpeg"
+                    src="/assets/concept2.jpg"
                     alt="Culture and Heritage"
                     fill
-                    // width={400}
                     className="object-cover"
                     priority={false}
                   />
